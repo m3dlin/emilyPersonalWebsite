@@ -36,7 +36,7 @@ http.createServer(function(req,res) {
 		fileStream.pipe(res);
 	} else if (stats.isDirectory()) {
 		res.writeHead(302, {
-			'Location' : 'index.html';
+			'Location' : 'index.html',
 		});
 	} else {
 		res.writeHead(500, {'Content-type' : 'text/plain'});
